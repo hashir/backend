@@ -4,16 +4,28 @@ namespace App\Controller;
 
 use App\Entity\Location;
 use App\Entity\Server;
+use FOS\RestBundle\Request\ParamFetcher;
+use FOS\RestBundle\Controller\Annotations\QueryParam;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use FOS\RestBundle\Validator\Constraints;
 
 class ApiController extends Controller
 {
-
-    public function listServerAction()
+    /**
+     * @QueryParam(name="minHdd", nullable=true, description="Minimam Storage.")
+     * @QueryParam(name="maxHdd", nullable=true, description="Maximum Storage.")
+     * @QueryParam(name="hddType", nullable=true, description="Storage Type.")
+     * @QueryParam(name="ram", nullable=true, description="Ram size")
+     * @QueryParam(name="location", nullable=true, description="Location id.")
+     *
+     * @param ParamFetcher $paramFetcher
+     *
+     */
+    public function listServerAction(ParamFetcher $paramFetcher)
     {
-//        $params = $request->query->all();
-        $servers = $this->getDoctrine()->getRepository(Server::class)->findServers(null);
+        $params = $paramFetcher->all();
+        $servers = $this->getDoctrine()->getRepository(Server::class)->findServers($params);
         return $this->json($servers);
     }
 
