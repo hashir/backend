@@ -114,4 +114,9 @@ class Ram
 
         return $this;
     }
+
+    function __toString(): string
+    {
+        return $this->code;
+    }
 }

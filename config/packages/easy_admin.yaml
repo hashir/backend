@@ -1,0 +1,7 @@
+easy_admin:
+    entities:
+        - App\Entity\Server
+        - App\Entity\Model
+        - App\Entity\Ram
+        - App\Entity\Disk
+        - App\Entity\Location
