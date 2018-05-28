@@ -56,6 +56,15 @@
     "doctrine/orm": {
         "version": "v2.6.1"
     },
+    "easycorp/easyadmin-bundle": {
+        "version": "1.17",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.17",
+            "ref": "66070ea553247b0cd5275e21d0fe5399a25f40be"
+        }
+    },
     "friendsofsymfony/rest-bundle": {
         "version": "2.2",
         "recipe": {
@@ -76,6 +85,9 @@
     },
     "ocramius/proxy-manager": {
         "version": "2.2.0"
+    },
+    "pagerfanta/pagerfanta": {
+        "version": "v1.1.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -98,6 +110,9 @@
             "ref": "aaddfdf43cdecd4cf91f992052d76c2cadc04543"
         }
     },
+    "symfony/asset": {
+        "version": "v4.0.11"
+    },
     "symfony/cache": {
         "version": "v4.0.11"
     },
@@ -112,6 +127,9 @@
             "version": "3.3",
             "ref": "e3868d2f4a5104f19f844fe551099a00c6562527"
         }
+    },
+    "symfony/css-selector": {
+        "version": "v4.0.11"
     },
     "symfony/debug": {
         "version": "v4.0.11"
@@ -143,6 +161,9 @@
             "ref": "cc1afd81841db36fbef982fe56b48ade6716fac4"
         }
     },
+    "symfony/form": {
+        "version": "v4.0.11"
+    },
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -158,6 +179,12 @@
     "symfony/http-kernel": {
         "version": "v4.0.11"
     },
+    "symfony/inflector": {
+        "version": "v4.0.11"
+    },
+    "symfony/intl": {
+        "version": "v4.0.11"
+    },
     "symfony/lts": {
         "version": "4-dev"
     },
@@ -170,11 +197,29 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/options-resolver": {
+        "version": "v4.0.11"
+    },
     "symfony/orm-pack": {
         "version": "v1.0.5"
     },
+    "symfony/phpunit-bridge": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "179470cb6492db92dffee208cfdb436f175c93b4"
+        }
+    },
+    "symfony/polyfill-intl-icu": {
+        "version": "v1.8.0"
+    },
     "symfony/polyfill-mbstring": {
         "version": "v1.8.0"
+    },
+    "symfony/property-access": {
+        "version": "v4.0.11"
     },
     "symfony/routing": {
         "version": "4.0",
@@ -183,6 +228,15 @@
             "branch": "master",
             "version": "4.0",
             "ref": "cda8b550123383d25827705d05a42acf6819fe4e"
+        }
+    },
+    "symfony/security-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "f8a63faa0d9521526499c0a8f403c9964ecb0527"
         }
     },
     "symfony/security-core": {
@@ -194,6 +248,9 @@
     "symfony/templating": {
         "version": "v4.0.11"
     },
+    "symfony/test-pack": {
+        "version": "v1.0.2"
+    },
     "symfony/translation": {
         "version": "3.3",
         "recipe": {
@@ -203,8 +260,35 @@
             "ref": "6bcd6c570c017ea6ae5a7a6a027c929fd3542cd8"
         }
     },
+    "symfony/twig-bridge": {
+        "version": "v4.0.11"
+    },
+    "symfony/twig-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "f75ac166398e107796ca94cc57fa1edaa06ec47f"
+        }
+    },
+    "symfony/validator": {
+        "version": "v4.0.11"
+    },
     "symfony/yaml": {
         "version": "v4.0.11"
+    },
+    "twig/extensions": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "4851df0afc426b8f07204379d21fca25b6df5d68"
+        }
+    },
+    "twig/twig": {
+        "version": "v2.4.8"
     },
     "willdurand/jsonp-callback-validator": {
         "version": "v1.1.0"
