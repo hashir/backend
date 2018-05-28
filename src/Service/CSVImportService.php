@@ -50,8 +50,7 @@ class CSVImportService
             $server->setLocation($this->getOrCreateLocation($location));
             $server->setPrice($this->getPriceValue($price));
             $server->setCurrency($this->getCurrencyValue($price));
-            $this->em->persist($server);
-            $this->em->flush();
+            $this->persist($server);
         }
         fclose($file);
 
@@ -69,9 +68,8 @@ class CSVImportService
 
         $model = new Model();
         $model->setCode($code);
-        
-        $this->em->persist($model);
-        $this->em->flush();
+
+        $this->persist($model);
 
         return $model;
     }
@@ -90,9 +88,8 @@ class CSVImportService
         $ram->setCode($code);
         $ram->setSize($size);
         $ram->setType($type);
-        
-        $this->em->persist($ram);
-        $this->em->flush();
+
+        $this->persist($ram);
 
         return $ram;
     }
@@ -120,9 +117,8 @@ class CSVImportService
         $disk->setCode($code);
         $disk->setSize($diskSize);
         $disk->setType($type);
-        
-        $this->em->persist($disk);
-        $this->em->flush();
+
+        $this->persist($disk);
 
         return $disk;
     }
@@ -139,9 +135,8 @@ class CSVImportService
         $location = new Location();
         $location->setCode($code);
         $location->setDescription('test');
-        
-        $this->em->persist($location);
-        $this->em->flush();
+
+        $this->persist($location);
 
         return $location;
     }
@@ -163,5 +158,11 @@ class CSVImportService
         preg_match("/[0-9\.]+/", $price, $matches);
         list($currency) = explode($matches[0], $price);
         return $currency;
+    }
+
+    private function persist($object): void {
+
+        $this->em->persist($object);
+        $this->em->flush();
     }
 }
