@@ -1,4 +1,3 @@
 api:
     type:     rest
-#    host:     m.example.com
     resource: App\Controller\ApiController

@@ -13,11 +13,12 @@ use FOS\RestBundle\Validator\Constraints;
 class ApiController extends Controller
 {
     /**
+     *
+     * @QueryParam(name="hddType", requirements="(SATA2|SAS|SSD)", nullable=true, description="Storage Type.")
+     * @QueryParam(name="ram", requirements="\d+", nullable=true, description="Ram size")
+     * @QueryParam(name="location", requirements="\d+", nullable=true, description="Location id.")
      * @QueryParam(name="minHdd", nullable=true, description="Minimam Storage.")
      * @QueryParam(name="maxHdd", nullable=true, description="Maximum Storage.")
-     * @QueryParam(name="hddType", nullable=true, description="Storage Type.")
-     * @QueryParam(name="ram", nullable=true, description="Ram size")
-     * @QueryParam(name="location", nullable=true, description="Location id.")
      *
      * @param ParamFetcher $paramFetcher
      *

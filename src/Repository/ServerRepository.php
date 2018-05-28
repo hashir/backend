@@ -19,6 +19,10 @@ class ServerRepository extends ServiceEntityRepository
         parent::__construct($registry, Server::class);
     }
 
+    /**
+     * @param $params
+     * @return mixed
+     */
     public function findServers($params){
         $serverQuery = $this->createQueryBuilder('server')
             ->select('server.id', 'mod.code as model', 'ram.code as RAM', 'disk.code as HDD', 'loc.code as location')

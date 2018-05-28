@@ -160,8 +160,10 @@ class CSVImportService
         return $currency;
     }
 
+    /**
+     * @param $object
+     */
     private function persist($object): void {
-
         $this->em->persist($object);
         $this->em->flush();
     }
