@@ -15,7 +15,7 @@ class ApiController extends Controller
     /**
      *
      * @QueryParam(name="hddType", requirements="(SATA2|SAS|SSD)", nullable=true, description="Storage Type.")
-     * @QueryParam(name="ram", requirements="\d+", nullable=true, description="Ram size")
+     * @QueryParam(name="ram", nullable=true, description="Ram size")
      * @QueryParam(name="location", requirements="\d+", nullable=true, description="Location id.")
      * @QueryParam(name="minHdd", requirements="\d+\.?\d*", nullable=true, description="Minimam Storage.")
      * @QueryParam(name="maxHdd", requirements="\d+\.?\d*", nullable=true, description="Maximum Storage.")
