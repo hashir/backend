@@ -26,7 +26,6 @@ class ApiController extends Controller
     public function listServerAction(ParamFetcher $paramFetcher)
     {
         $params = $paramFetcher->all();
-        print_r($params);
         $servers = $this->getDoctrine()->getRepository(Server::class)->findServers($params);
         return $this->json($servers);
     }
