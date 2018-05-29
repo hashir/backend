@@ -17,8 +17,8 @@ class ApiController extends Controller
      * @QueryParam(name="hddType", requirements="(SATA2|SAS|SSD)", nullable=true, description="Storage Type.")
      * @QueryParam(name="ram", requirements="\d+", nullable=true, description="Ram size")
      * @QueryParam(name="location", requirements="\d+", nullable=true, description="Location id.")
-     * @QueryParam(name="minHdd", nullable=true, description="Minimam Storage.")
-     * @QueryParam(name="maxHdd", nullable=true, description="Maximum Storage.")
+     * @QueryParam(name="minHdd", requirements="\d+\.?\d*", nullable=true, description="Minimam Storage.")
+     * @QueryParam(name="maxHdd", requirements="\d+\.?\d*", nullable=true, description="Maximum Storage.")
      *
      * @param ParamFetcher $paramFetcher
      *
@@ -26,6 +26,7 @@ class ApiController extends Controller
     public function listServerAction(ParamFetcher $paramFetcher)
     {
         $params = $paramFetcher->all();
+        print_r($params);
         $servers = $this->getDoctrine()->getRepository(Server::class)->findServers($params);
         return $this->json($servers);
     }
