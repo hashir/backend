@@ -8,3 +8,4 @@
 Route /data-import will import data from CSV file
 servers/list and locations/list are the two api's implemented.
 
+Will be running at http://localhost:8081/
